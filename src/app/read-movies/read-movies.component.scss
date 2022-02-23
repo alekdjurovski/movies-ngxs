@@ -1,0 +1,32 @@
+/*Google fonts*/
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+
+.read {
+  max-width: 30em;
+  margin: 4em auto;
+  position: relative;
+  background: #f4f4f4;
+  padding: 2em 3em;
+  overflow: hidden;
+}
+ h1 {
+  font-family: "Raleway";
+  color: #f97300;
+}
+ .data {
+  margin-top: 1em;
+}
+ .data li {
+  background: #fff;
+  border-left: 4px solid #f97300;
+  padding: 1em;
+  margin: 1em auto;
+  color: #666;
+  font-family: "Raleway";
+  text-decoration: none;
+}
+ .data li i {
+  float: right;
+  color: #888;
+  cursor: pointer;
+}
