@@ -2,9 +2,9 @@
   <h1 class="text-center">Movies To Watch</h1>
   <div class="data">
     <ul class="list-unstyled">
-      <li>
-        <a [attr.href]="" target="_blank"></a>
-        <i>delete</i>
+      <li *ngFor="let movie of movies$ | async">
+        <a [attr.href]="'//' + movie.url" target="_blank">{{ movie.name }}</a>
+        <i (click)="deleteMovie(movie)" >delete</i>
       </li>
     </ul>
   </div>

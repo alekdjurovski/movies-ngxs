@@ -4,10 +4,10 @@
     <div>
       <input type="text" placeholder="name" #name />
       <input type="text" placeholder="url" #url />
-      <span
+      <span (click)="addMovie(name.value, url.value)" 
         class="input-group-text"
       >
-        <i class="add-btn">add</i></span
+        <i class="add-btn" >add</i></span
       >
     </div>
   </div>

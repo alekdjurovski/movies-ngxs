@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Store } from '@ngxs/store';
+import { AddMovie } from '../action/movies.action';
 
 @Component({
   selector: 'app-add-movie',
   templateUrl: './add-movie.component.html',
-  styleUrls: ['./add-movie.component.scss']
+  styleUrls: ['./add-movie.component.scss'],
 })
-export class AddMovieComponent implements OnInit {
+export class AddMovieComponent {
+  constructor(private store: Store) {}
 
-  constructor() { }
-
-  ngOnInit(): void {
+  addMovie(name: string, url: string) {
+    this.store.dispatch(new AddMovie({name, url}) )
   }
-
 }
